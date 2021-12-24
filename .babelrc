@@ -16,5 +16,20 @@
         "regenerator": true
       }
     ]
-  ]
+  ],
+  // konfiguracija za testiranje (kaze ako je node.env = test, targetiraj node, nemoj targetirati browser)
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
